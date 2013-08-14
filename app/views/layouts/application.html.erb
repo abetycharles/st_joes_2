@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+  <%= render '/layouts/head' %>
+  <body>
+    <%= render '/refinery/ie6check' if request.env['HTTP_USER_AGENT'] =~ /MSIE/ -%>
+    <div id="page_container">
+      <div id="banner">
+      
+      </div>
+      <header id="header" class="linearBg2 main">
+        <%= render '/layouts/header' -%>
+      </header>
+      <div id="banner">
+      
+      </div>
+      <div class="container-fluid">
+      <div class="row-fluid">
+        <div class="span3">
+          <div id="leftbar">
+
+  <!-- NEWS BOX -->
+
+  <div id="wrap">
+      <div id="blocks">
+        <section id="news" class="box">
+            <h1 class="script">Latest News</h1>
+        </section>
+      </div>
+  </div>  <!-- end #wrap -->
+
+
+  <!-- BUTTONS -->
+  <div>
+      <a href="#" class="button"><span>Donate Online</span></a>
+  </div>
+
+  <div>
+      <a href="#" class="button"><span>Pledge Online</span></a>
+  </div>
+  <div>
+      <a href="#" class="button"><span>Parishioner Registration</span></a>
+  </div>
+
+
+</div>  <!-- end #leftbar -->
+        </div><!--/span-->
+        <div class="span9">
+          
+          <div class="row-fluid">
+            <div class="span8">
+             <%= raw(@page.content_for(:body)) %>
+            </div><!--/span-->
+            
+            <div class="span4">
+
+                <div id="rightbar">
+                  <div id="wrap">
+                      <div id="blocks">
+                        <section id="news" class="box">
+                            <h1 class="script">Mass Schedule</h1>
+                            <%= raw(@page.content_for(:massSchedule)) %>
+                        </section>
+                      </div>
+                  </div>  <!-- end #wrap -->
+
+                  <div id="wrap">
+                      <div id="blocks">
+                        <section id="news" class="box">
+                            <h1 class="script">Calendar</h1>
+                        </section>
+                      </div>
+                  </div>  <!-- end #wrap -->
+                </div>
+
+            </div><!--/span-->
+          </div><!--/row-->
+          <div class="row-fluid">
+          </div><!--/row-->
+        </div><!--/span-->
+      </div><!--/row-->
+
+      
+      <footer>
+        <%= render '/layouts/footer' -%>
+      </footer>
+    </div>
+    <%= render '/layouts/scripts' %>
+  </body>
+</html>

@@ -1,0 +1,56 @@
+<section id="contact">
+               <div class="hgroup">
+                    <h1>Contact us</h1>
+                    <h2><%=raw @page.content_for(:body) %></h2>
+                    <ul class="breadcrumb pull-right">
+                         <li><a href="/">Home</a> <span class="divider">/</span></li>
+                         <li class="active">Contact</li>
+                    </ul>
+               </div>
+<div class='inquiries'>
+    <div class="row">
+                    <div class="span4 office_address">
+                         <address>
+                         <%=raw @page.content_for(:side_body) %>
+                         </address>
+                        
+                    </div>
+                    <div class="span8 contact_form">
+                         <%= form_for [refinery, :inquiries, @inquiry] do |f| %>
+                              <%= render :partial => "/refinery/admin/error_messages",
+                                     :locals => {
+                                       :object => @inquiry,
+                                       :include_object_name => true
+                                     } %>
+                              <div class="row">
+                                   <div class="field span4">
+                                        <label class="placeholder-fallback" for="inquiry_name">Name *</label>
+                                        <input class="text span4" id="inquiry_name" name="inquiry[name]" placeholder="Name" required="required" size="30" type="text" />
+                                   </div>
+
+                                   <div class="field span4">
+                                      <label class="placeholder-fallback" for="inquiry_email">Email *</label>
+                                      <input class="text email span4" id="inquiry_email" name="inquiry[email]" placeholder="Email" required="required" size="30" type="email" />
+                                    </div>
+                                   
+                                   <div class="field span4">
+                                      <label class="placeholder-fallback" for="inquiry_phone">Phone</label>
+                                      <input class="text phone span4" id="inquiry_phone" name="inquiry[phone]" placeholder="Phone" size="30" type="text" />
+                                    </div>
+
+                                    <div class="field message_field span8">
+                                      <label class="placeholder-fallback" for="inquiry_message">Message *</label>
+                                      <textarea cols="40" id="inquiry_message" name="inquiry[message]" placeholder="Message" required="required" rows="8" class="span8">
+                                        </textarea>
+                                    </div>
+
+                                    <div class="actions span8">
+                                      <input name="commit" type="submit" class="btn btn-large btn-success" value="Send message" />
+                                    </div>
+                                   
+                              </div>
+                         <% end %>
+                    </div>
+               </div>
+</div>
+</section>

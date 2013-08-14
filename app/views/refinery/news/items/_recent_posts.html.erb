@@ -1,0 +1,15 @@
+<nav id="recent_news_items">
+  <h3>Latest News</h3>
+  <ul class="media-list">
+    <% @items.each do |item| %>
+      <li class="media"> 
+      	<a href="#" class="media-photo" style="background-image:url(images/portfolio/t5.jpg)"></a> 
+      	<a href="#"  class="media-date"><%= item.publish_date.day %><span><%= I18n.t("date.abbr_month_names")[item.publish_date.month].upcase %></span></a>
+
+      	<h5 class="media-heading"><%= link_to item.title, refinery.news_item_path(item) %></h5>
+      	        
+      </li>
+    <% end %>
+  </ul>
+</nav>
+

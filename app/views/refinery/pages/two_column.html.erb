@@ -1,0 +1,25 @@
+<div class="container">
+     <section id="services">
+          <div class="hgroup">
+               <h1>Services</h1>
+               <h2>Delivering High Tech, High Touch Medicine in 21st Century, with empathy.</h2>
+               <ul class="breadcrumb pull-right">
+                    <li><a href="/">Home</a> <span class="divider">/</span></li>
+                    <li class="active">Services</li>
+               </ul>
+          </div>
+          <div class="row-fluid service_teaser">
+               <div class="span4 teaser_photo"> 
+                    <%=raw @page.content_for(:pic) %> 
+               </div>
+               <div class="span8">
+                    
+                    <%= raw(@page.content_for(:body)) %>
+                    
+                    <hr/>
+                    
+               </div>
+          </div>
+     </section>   
+     
+</div>

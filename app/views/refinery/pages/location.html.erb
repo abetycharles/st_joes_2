@@ -1,0 +1,25 @@
+<div class="full_page_photo">
+    <%=raw @page.content_for(:google_map) %>
+</div>
+<div id="main">
+     <div class="container">
+          <section id="contact">
+               <div class="hgroup">
+                    <h1><%=raw @page.content_for(:location) %></h1>
+                    <ul class="breadcrumb pull-right">
+                         <li><a href="/">Home</a> <span class="divider">/</span></li>
+                         <li class="active">Practice Location</li>
+                    </ul>
+               </div>
+               <div class="row">
+                    <div class="span4 office_address">
+                         <address>
+                              <%=raw @page.content_for(:address) %>
+                         </address>
+                         
+                    </div>
+               
+               </div>
+          </section>
+          <!--END Contact-->
+     </div>

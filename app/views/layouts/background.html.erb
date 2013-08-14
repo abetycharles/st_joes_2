@@ -1,0 +1,47 @@
+<!doctype html>
+
+<%= render "/layouts/head" %>
+
+<body class="collapsing_header">
+
+<header>
+     <%= render "/layouts/header" %>
+</header>
+<%= render "layouts/static_photo_banner" %>
+
+<div id="main">
+     <div class="container">
+          <section id="about_us">
+               <div class="hgroup">
+                    <h1>Background</h1>
+                    <ul class="breadcrumb pull-right">
+                         <li><a href="/">Home</a> <span class="divider">/</span></li>
+                         <li class="active">Background</li>
+                    </ul>
+               </div>
+               <article>
+                    <div class="row">
+                         <div class="span12">
+                              <p>
+                                   <%= raw(@page.content_for(:body)) %>
+                              </p>      
+                         </div>    
+                    </div>
+                    
+                    <div class="row">
+                         
+                    </div>
+               </article>
+          </section>
+     </div>
+
+     <footer>
+          <%= render "layouts/footer" %>
+     </footer>
+
+</div>
+
+<%= render "/layouts/scripts" %>
+
+</body>
+</html>
